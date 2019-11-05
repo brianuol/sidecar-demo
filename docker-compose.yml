@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  petstore:
+    image: ${DOCKER_REGISTRY-}petstore
+    build:
+      context: .
+      dockerfile: src/Petstore/Dockerfile

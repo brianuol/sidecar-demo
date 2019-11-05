@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dotnetlinux
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dotnetlinux
+    spec:
+      containers:
+        - image: "brianfriedman/petstore"
+          imagePullPolicy: Never
+          name: dotnetlinux
+          ports:
+            - containerPort: 80
