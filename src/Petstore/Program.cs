@@ -21,7 +21,7 @@ namespace Petstore
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                
+                .UseUrls("http://localhost:8080")
                 .UseSerilog((hostingContext, loggerConfiguration) => 
                     loggerConfiguration
                     .ReadFrom.Configuration(hostingContext.Configuration))

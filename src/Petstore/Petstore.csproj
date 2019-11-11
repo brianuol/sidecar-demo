@@ -6,7 +6,7 @@
     <UserSecretsId>470b7374-0ba5-48a3-bd3c-b0b6930bb47d</UserSecretsId>
   </PropertyGroup>
 
-  <Target Name="GenerateCodeFromSwaggerSpec" BeforeTargets="BeforeBuild" Condition=" '$(GenerateApi)' == 'true'">
+  <Target Name="GenerateCodeFromSwaggerSpec" BeforeTargets="BeforeBuild" Condition=" '$(GenerateApi)' != 'false'">
     <Exec Command="codegen --Spec spec/petstore.swagger.json --Namespace Petstore --CodeGenDir _generated" />
   </Target>
 

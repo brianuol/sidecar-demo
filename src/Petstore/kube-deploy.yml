@@ -13,5 +13,8 @@ spec:
         - image: "brianfriedman/petstore"
           imagePullPolicy: Never
           name: dotnetlinux
+        - image: "brianfriedman/auth-proxy"
+          imagePullPolicy: Never
+          name: auth-proxy
           ports:
             - containerPort: 80
